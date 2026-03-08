@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply antialiased;
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+}
+
+/* Global Select/Dropdown Styles */
+select, 
+select option,
+.form-select,
+select.form-control,
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"] {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+select option {
+  background-color: #1f2937 !important; /* Dark background for options */
+  color: white !important;
+}
+
+/* For Firefox */
+select option:checked,
+select option:hover {
+  background-color: #3b82f6 !important;
+  color: white !important;
+}
+
+/* For Chrome/Safari/Edge */
+select:focus,
+select:active {
+  outline: none !important;
+  ring: 2px solid #3b82f6 !important;
+}
+
+/* Date inputs specific */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* Makes the calendar icon white */
+}
