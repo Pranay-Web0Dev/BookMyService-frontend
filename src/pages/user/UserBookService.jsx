@@ -59,7 +59,7 @@ const UserBookService = () => {
       setServiceman(location.state.serviceman);
       setFormData(prev => ({
         ...prev,
-        serviceManId: location.state.serviceman.userId._id,
+        serviceManId: location.state.serviceman.userId,
         categoryId: location.state.serviceman.category._id,
         price: location.state.serviceman.pricePerHour || 0
       }));
@@ -428,7 +428,7 @@ const UserBookService = () => {
                 <FaUser className="text-white text-xl" />
               </div>
               <div>
-                <h3 className="text-white font-medium">{serviceman.userId?.name}</h3>
+                <h3 className="text-white font-medium">{serviceman.name}</h3>
                 <p className="text-sm text-gray-400">{serviceman.category?.name}</p>
               </div>
             </div>
