@@ -214,7 +214,7 @@ const Login = () => {
               <div className="grid grid-cols-2 gap-2 text-xs">
                 <div className="bg-white/5 p-2 rounded">
                   <p className="text-gray-400">User</p>
-                  <p className="text-blue-400">sdf@gmail.com</p>
+                  <p className="text-blue-400">toast@gmail.com</p>
                   <p className="text-gray-500">pass: 12345678</p>
                 </div>
                 <div className="bg-white/5 p-2 rounded">
